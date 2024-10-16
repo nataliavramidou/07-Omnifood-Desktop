@@ -129,13 +129,13 @@ Privacy & terms
 
 ## Sections
 
--navigation
--Hero
--featured in (logos)
--How it works
--Meals -Diets (one section)
--gallery -testimonials
--pricing -Feautures
--Feautures
--call to action (form)
--footer (contact)
+navigation
+Hero
+featured in (logos)
+How it works
+Meals -Diets (one section)
+gallery -testimonials
+pricing -Feautures
+Feautures
+call to action (form)
+footer (contact)
