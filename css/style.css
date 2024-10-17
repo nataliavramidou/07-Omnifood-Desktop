@@ -11,6 +11,7 @@ Default: 400
  
 Line heights: 
 Defailt: 1
+1.05
 
 SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
@@ -18,10 +19,11 @@ SPACING SYSTEM (px)
 ---- 02-COLORS
 
 Primary: #e67e22
-Tints:
+Tints: #fdf2e9
 Shades:
 Accents:
 Greys: #555
+#333
 
 ---- 03-SHADOWS
 
@@ -54,14 +56,91 @@ body {
   font-weight: 400;
 }
 
+.section-hero {
+  background-color: #fdf2e9;
+  padding: 9.8rem;
+}
+
 .hero {
   max-width: 130rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
+  gap: 9.8rem;
+  align-items: center;
 }
 
 .hero-img {
   /* to give 100% of the parent container */
   width: 100%;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.05;
+  color: #333;
+  letter-spacing: -0.5px;
+  margin-bottom: 3.2rem;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.btn:link,
+.btn:visited {
+  background-color: #e67e22;
+  font-size: 2rem;
+
+  display: inline-block;
+  padding: 1.6rem 3.2rem;
+  text-decoration: none;
+  border-radius: 0.9rem;
+
+  /* TRICK FOR changing color in buttons 
+  we can include animation with 
+  this property 
+  we put the transition on the element of the original state
+  */
+  transition: background-color 0.3s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: #e67e22;
+  color: white;
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: #cf711f;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: white;
+  color: #555;
+  /* border:3px solid white; */
+
+  /* TRICK how to put border inside */
+  box-shadow: inset 0 0 0 3px white;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: #fdf2e9;
+}
+
+/* with elements that i want to reuse
+ in page maybe not defyning margins
+so putting helper class */
+
+/* !important in helper classes like that 
+to be sure it will overwrite 
+other properties applied */
+.margin-right-sm {
+  margin-right: 1.6rem !important;
 }
