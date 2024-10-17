@@ -20,7 +20,7 @@ SPACING SYSTEM (px)
 
 Primary: #e67e22
 Tints: #fdf2e9
-Shades:
+Shades: #cf711f;
 Accents:
 Greys: #555
 #333
@@ -50,7 +50,7 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Rubik", sans-serif;
   line-height: 1;
   color: #555;
   font-weight: 400;
@@ -94,7 +94,7 @@ body {
 .btn:visited {
   background-color: #e67e22;
   font-size: 2rem;
-
+  font-weight: 600;
   display: inline-block;
   padding: 1.6rem 3.2rem;
   text-decoration: none;
@@ -143,4 +143,38 @@ to be sure it will overwrite
 other properties applied */
 .margin-right-sm {
   margin-right: 1.6rem !important;
+}
+
+.delivered-meals {
+  display: flex;
+  margin-top: 8rem;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.delivered-img {
+  display: flex;
+}
+.customer-avatar {
+  height: 4.8rem;
+  border-radius: 50%;
+
+  /* how to make images overlap
+  and also put a border as the background */
+  border: 3px solid #fdf2e9;
+  /* how to make images overlap */
+  margin-right: -1.6rem;
+}
+
+.customer-avatar:last-child {
+  margin-right: 0;
+}
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.delivered-text span {
+  color: #cf711f;
+  font-weight: 700;
 }
