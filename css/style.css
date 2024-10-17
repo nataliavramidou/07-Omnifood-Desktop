@@ -37,9 +37,30 @@ Greys: #555
   box-sizing: border-box;
 }
 
+html {
+  /* we want the font size to be 10px for easy calculations 
+   but we dont want to be fixed 10px so that it can change 
+  so we do calculation 10/16*100 
+  we set font size to 62.5% */
+
+  /* percentage of user's browser font setting */
+  font-size: 62.5%;
+}
+
 body {
   font-family: sans-serif;
   line-height: 1;
   color: #555;
   font-weight: 400;
+}
+
+.test {
+  /* max-width: 1000px; */
+  background-color: red;
+  padding: 4rem;
+
+  max-width: 50rem;
+  color: white;
+  font-size: 2rem;
+  /* 1rem=16px, 50rem=16*50=800px */
 }
