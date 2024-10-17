@@ -54,13 +54,14 @@ body {
   font-weight: 400;
 }
 
-.test {
-  /* max-width: 1000px; */
-  background-color: red;
-  padding: 4rem;
+.hero {
+  max-width: 130rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+}
 
-  max-width: 50rem;
-  color: white;
-  font-size: 2rem;
-  /* 1rem=16px, 50rem=16*50=800px */
+.hero-img {
+  /* to give 100% of the parent container */
+  width: 100%;
 }
