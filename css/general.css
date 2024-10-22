@@ -29,7 +29,10 @@ SPACING SYSTEM (px)
 ---- 02-COLORS
 
 Primary: #e67e22
-Tints: #fdf2e9
+Tints: 
+#fdf2e9
+
+#fae5d3
 Shades: #cf711f; 
 Accents:
 Greys: #555
@@ -72,7 +75,8 @@ body {
 /******************************/
 
 .heading-primary,
-.heading-secondary {
+.heading-secondary,
+.heading-third {
   font-weight: 700;
   color: #333;
   letter-spacing: -0.5px;
@@ -95,6 +99,9 @@ body {
 }
 
 .heading-third {
+  font-size: 3rem;
+  line-height: 1.02;
+  margin-bottom: 3.3rem;
 }
 
 .subheading {
@@ -116,7 +123,7 @@ you would have to write a lot of times in the website.
 και το προσθετουμε σε οποιο σημειο θελουμε*/
 .grid {
   display: grid;
-  gap: 9.6rem;
+  gap: 9.6rem 6.4rem;
 }
 
 /* Φτιαχνουμε και class grid--x-cols με τις στηλες που 
@@ -127,6 +134,10 @@ you would have to write a lot of times in the website.
 
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--center-v {
+  align-items: center;
 }
 
 /* reusable container for centered */
