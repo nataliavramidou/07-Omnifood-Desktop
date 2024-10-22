@@ -74,6 +74,37 @@ body {
   margin-bottom: 3.2rem;
 }
 
+/* how to create a reusable grid, a code that 
+you would have to write a lot of times in the website.
+
+Φτιαχνουμε ένα class grid με τα properties μονο του grid,
+και το προσθετουμε σε οποιο σημειο θελουμε*/
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+
+/* Φτιαχνουμε και class grid--x-cols με τις στηλες που 
+ θελουμε γιατι δεν θα ειναι παντου το ιδιο */
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* reusable container for centered */
+/* by convention 120 rem se polla sites to max-width */
+/* η 1140px */
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  /* βαζουμε padding ωστε όταν μικραινουμε το viewport
+  να μη κολλαει δεξια και αριστερα */
+  padding: 0 3.2rem;
+}
+
 .btn:link,
 .btn:visited {
   background-color: #e67e22;
@@ -203,12 +234,14 @@ other properties applied */
   padding: 4.8rem 0 9.6rem 0;
 }
 
+/* δεν χρησιμοποιησαμε το centered reusable container για το hero γιατι 
+ειναι ωραιο ο hero να ειναι πιο πλατυ section από τα υπόλοιπα 
+130rem αντι για 120rem*/
 .hero {
   max-width: 130rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
-
   /* βαζουμε padding ωστε όταν μικραινουμε το viewport
   να μη κολλαει δεξια και αριστερα */
   padding: 0 3.2rem;
@@ -259,4 +292,15 @@ other properties applied */
 .delivered-text span {
   color: #cf711f;
   font-weight: 700;
+}
+
+/********************************/
+/* SECTION HOW */
+/********************************/
+
+.section-how {
+  /* the same padding with previous section .
+  for consistency */
+  padding: 4.8rem 0;
+  background: orangered;
 }
