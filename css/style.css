@@ -15,7 +15,13 @@ Default: 400
 Line heights: 
 Defailt: 1
 Small: 1.05
+Medium: 1.2
 Paragraph default: 1.6
+
+Letter spacing: 
+-0.5px;
+0.75px;
+
 
 SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
@@ -24,7 +30,7 @@ SPACING SYSTEM (px)
 
 Primary: #e67e22
 Tints: #fdf2e9
-Shades: #cf711f;
+Shades: #cf711f; 
 Accents:
 Greys: #555
 #333
@@ -65,13 +71,39 @@ body {
 /*  GENERAL REUSABLE COMPONENTS */
 /******************************/
 
-.heading-primary {
-  font-size: 5.2rem;
+.heading-primary,
+.heading-secondary {
   font-weight: 700;
-  line-height: 1.05;
   color: #333;
   letter-spacing: -0.5px;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
   margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  /* το line height το βάζουμε έτσι κ αλλιως γιατι 
+  οσο μικραινουμε την οθονη διπλωνει η προταση σε πολλες σειρες */
+  line-height: 1.02;
+  /* στα 2 sections εχουμε padding 9.6+9.6 Αρα από το big heading (h2) 
+  μέσα στο section μας δεν ειναι πολυ να βαλουμε 9.6 */
+  margin-bottom: 9.6rem;
+}
+
+.subheading {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1.6rem;
+  display: block;
+  color: #cf711f;
+  text-transform: uppercase;
+  /* when we have bold and uppercase letters, nice to have letter spacing 
+  to give space between the letters for better effect */
+  letter-spacing: 0.75px;
 }
 
 /* how to create a reusable grid, a code that 
@@ -301,6 +333,25 @@ other properties applied */
 .section-how {
   /* the same padding with previous section .
   for consistency */
-  padding: 4.8rem 0;
-  background: orangered;
+  padding: 9.6rem 0;
+}
+
+.section-how .container {
+  justify-items: center;
+}
+
+.steps-img {
+  max-width: 50%;
+}
+
+.step-text-box {
+}
+
+.step-img-box {
+  text-align: center;
+}
+
+.number {
+  font-size: 9.8rem;
+  color: red;
 }
