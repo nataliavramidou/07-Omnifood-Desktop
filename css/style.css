@@ -229,4 +229,10 @@ cycle */
 
 .logo-img {
   height: 3.2rem;
+  /* manipulate photos */
+
+  /* filter: brightness(0); > gia na ginoun oles to idio mauro xroma
+  opacity: 50%; > gia na einai ligotero entones kai na vgoun gkri */
+  filter: brightness(0);
+  opacity: 50%;
 }
