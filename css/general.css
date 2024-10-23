@@ -132,8 +132,8 @@ you would have to write a lot of times in the website.
   grid-template-columns: repeat(2, 1fr);
 }
 
-.grid--4-cols {
-  grid-template-columns: repeat(4, 1fr);
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .grid--center-v {
