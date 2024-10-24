@@ -116,6 +116,17 @@ body {
   letter-spacing: 0.75px;
 }
 
+/* reusable container for centered */
+/* by convention 120 rem se polla sites to max-width */
+/* η 1140px */
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  /* βαζουμε padding ωστε όταν μικραινουμε το viewport
+  να μη κολλαει δεξια και αριστερα */
+  padding: 0 3.2rem;
+}
+
 /* how to create a reusable grid, a code that 
 you would have to write a lot of times in the website.
 
@@ -124,6 +135,13 @@ you would have to write a lot of times in the website.
 .grid {
   display: grid;
   gap: 9.6rem 6.4rem;
+}
+
+/* θελω τα reusable grid mas an valw polla
+na exoyn automata margin
+an exw omws mono 1 na min exei */
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
 }
 
 /* Φτιαχνουμε και class grid--x-cols με τις στηλες που 
@@ -136,19 +154,12 @@ you would have to write a lot of times in the website.
   grid-template-columns: repeat(3, 1fr);
 }
 
-.grid--center-v {
-  align-items: center;
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
 }
 
-/* reusable container for centered */
-/* by convention 120 rem se polla sites to max-width */
-/* η 1140px */
-.container {
-  max-width: 120rem;
-  margin: 0 auto;
-  /* βαζουμε padding ωστε όταν μικραινουμε το viewport
-  να μη κολλαει δεξια και αριστερα */
-  padding: 0 3.2rem;
+.grid--center-v {
+  align-items: center;
 }
 
 .btn:link,
