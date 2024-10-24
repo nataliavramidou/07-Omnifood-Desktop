@@ -375,3 +375,40 @@ as css attr for color
   text-align: center;
   font-size: 1.8rem;
 }
+
+/********************************************/
+/* TESTIMONIALS */
+/**********************************************/
+.testimonials-section {
+  padding: 9.6rem 0;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.2rem;
+}
+
+.testimonial-img {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+
+/* γενικα σε διαφορο content προσπαθουμε να ειμαστε consistent σε font size kai line height
+
+ */
+.testimonial-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin: 1.6rem;
+}
+
+.testimonial-name {
+  font-size: 1.6rem;
+  color: #777;
+}
+
+.img-gallery {
+  width: 100%;
+}
