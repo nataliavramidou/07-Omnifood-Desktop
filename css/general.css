@@ -166,7 +166,7 @@ you would have to write a lot of times in the website.
   this property 
   we put the transition on the element of the original state
   */
-  transition: background-color 0.3s;
+  transition: all 0.3s;
 }
 
 .btn--full:link,
@@ -195,6 +195,31 @@ you would have to write a lot of times in the website.
   background-color: #fdf2e9;
 }
 
+.link:link,
+.link:visited {
+  text-decoration: none;
+  color: #e67e22;
+  /* it takes the color of the text currently,
+  ara gia na allazei otan exoume kai to hover px se allo xroma*/
+  border-bottom: 1px solid currentColor;
+
+  /* και padding bottom για να εχει κενο η γραμμη */
+  padding-bottom: 2px;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  color: #cf711f;
+
+  /* στο hover βαζουμε transparent border γιατι αν το βγαλουμε τελειως αλλάζει 
+  το μέγεθος του element και φαίνεται σαν ν ανεβοκατεβαινει */
+  border-bottom: 1px solid transparent;
+}
+
+/* HELPER - SETTING CLASSES */
+
 /* with elements that i want to reuse
  in page maybe not defyning margins
 so putting helper class */
@@ -204,6 +229,15 @@ to be sure it will overwrite
 other properties applied */
 .margin-right-sm {
   margin-right: 1.6rem !important;
+}
+
+/* helper class */
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+  text-align: center;
 }
 
 strong {

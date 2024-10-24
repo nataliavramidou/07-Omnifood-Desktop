@@ -258,6 +258,21 @@ cycle */
    οπως εδω η εικονα
    και ουσιαστικα δεν  φαινοταν πριν το border radius*/
   overflow: hidden;
+  transition: all 0.5s;
+}
+
+/* 
+Οταν κανω hover πανω στη καρτα να κανει λίγο pop up 
+
+θελω μόνο κάθετα
+και προς τα πάνω
+και να μη γινεται αποτομα γι
+αυτο βαζω και animation*/
+.meal-box:hover {
+  transform: translateY(-2rem);
+
+  /* otan anevenei pros ta panw gia kalitero effect megalonoume kai ti skia */
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.065);
 }
 
 .meal-info-box {
@@ -330,4 +345,33 @@ as css attr for color
 
 .tag--paleo {
   background-color: #ffe066;
+}
+
+.diets-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.diet-list-li {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  gap: 1.2rem;
+}
+
+.list-icon {
+  color: #e67e22;
+  /* εδω το βαζουμε ετσι για να ειναι τετραγωνο */
+  height: 3rem;
+  width: 3rem;
+}
+
+/* εδω βαζουμε το ιδιαιτερο styling
+ στο div γιατι θελουμε το link να είναι ουδετερο και
+ reusable */
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
 }
