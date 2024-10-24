@@ -380,13 +380,25 @@ as css attr for color
 /* TESTIMONIALS */
 /**********************************************/
 .testimonials-section {
-  padding: 9.6rem 0;
+  background-color: #fdf2e9;
+  display: grid;
+
+  /* we want to make smaller the gallery
+   because it s too much for the eye
+to 1fr 1fr einai moirasmeno akrivws sti mesi 
+ara to moirazoume*/
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
 }
 
 .testimonials {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3.2rem;
+  row-gap: 3.2rem;
+  column-gap: 6rem;
+}
+.testimonials-container {
+  padding: 9.6rem;
 }
 
 .testimonial-img {
@@ -406,9 +418,29 @@ as css attr for color
 
 .testimonial-name {
   font-size: 1.6rem;
-  color: #777;
+  color: #6d6d6d;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  padding: 1.6rem;
+}
+
+.gallery-item {
+  /* η εικονα θα ζουμαρει αλλα δεν θα καλυπτει το container
+ */
+  overflow: hidden;
 }
 
 .img-gallery {
   width: 100%;
+  display: block;
+  transform: scale(1);
+  transition: all 0.4s;
+}
+
+.img-gallery:hover {
+  transform: scale(1.1);
 }
