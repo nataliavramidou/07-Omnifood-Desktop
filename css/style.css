@@ -248,6 +248,21 @@ cycle */
   padding: 9.6rem 0;
 }
 
+.meal-box {
+  border-radius: 11px;
+  /* shadow is
+  horizontically vertically blur  color*/
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+  /* αυτο για οποτε εχουμε κατι που κανει overflow
+   οπως εδω η εικονα
+   και ουσιαστικα δεν  φαινοταν πριν το border radius*/
+  overflow: hidden;
+}
+
+.meal-info-box {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
 .meal-img {
   width: 100%;
   display: block;
@@ -269,8 +284,50 @@ cycle */
   flex-direction: column;
   gap: 2rem;
 }
+
 .meal-atr {
   font-size: 1.8rem;
   display: flex;
   align-items: center;
+  gap: 1.2rem;
+}
+
+.meal-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+
+  /* COLOR
+  STROKE
+  FILL
+as css attr for color
+γενικα εδω τα icon δουλευουν σαν text */
+  color: #e67e22;
+}
+
+.tags {
+  margin-bottom: 1.2rem;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+
+  color: black;
+  border-radius: 8px;
+}
+
+.tag--veget {
+  background-color: #8ce99a;
+}
+
+.tag--vegan {
+  background-color: #c0eb75;
+}
+
+.tag--paleo {
+  background-color: #ffe066;
 }
