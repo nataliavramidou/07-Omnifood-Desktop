@@ -347,27 +347,6 @@ as css attr for color
   background-color: #ffe066;
 }
 
-.diets-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-}
-
-.diet-list-li {
-  display: flex;
-  align-items: center;
-  font-size: 1.8rem;
-  gap: 1.2rem;
-}
-
-.list-icon {
-  color: #e67e22;
-  /* εδω το βαζουμε ετσι για να ειναι τετραγωνο */
-  height: 3rem;
-  width: 3rem;
-}
-
 /* εδω βαζουμε το ιδιαιτερο styling
  στο div γιατι θελουμε το link να είναι ουδετερο και
  reusable */
@@ -443,4 +422,47 @@ ara to moirazoume*/
 
 .img-gallery:hover {
   transform: scale(1.1);
+}
+
+/*******************************/
+/*  PRICING                */
+/*******************************/
+
+.section-pricing {
+  /* the same padding with previous section .
+  for consistency */
+  padding: 9.6rem 0;
+}
+
+.plan-header {
+  text-align: center;
+  margin: 4.8rem;
+}
+
+.plan-name {
+  font-size: 2rem;
+  color: #cf711f;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.75;
+  margin-bottom: 3.2rem;
+}
+
+.price {
+  font-size: 6.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+
+.price span {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.plan-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #6d6d6d;
 }
