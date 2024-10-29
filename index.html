@@ -588,6 +588,44 @@ we will then include all of them. -->
           </div>
         </div>
       </section>
+
+      <section class="section-cta">
+        <div class="container">
+          <!-- we make it different div from above because we dont want the padding of the container
+           to be vissible (because of background color) -->
+          <div class="cta">
+            <div class="cta-text-box">
+              <div class="cta-heading">
+                <h2 class="heading-secondary">Get your first meal for free</h2>
+                <p class="cta-text">
+                  Healthy, tasty and hassle-free meals are waiting for you.
+                  Start eating well today. You can cancel or pause anytime. And
+                  the first meal is on us!
+                </p>
+              </div>
+
+              <!-- <div class="call-to-action-form-contain"> -->
+
+              <form class="form">
+                <input class="name" type="text" />
+                <input class="email" type="text" />
+                <input class="name" type="text" />
+                <button class="submit" type="submit">dd</button>
+              </form>
+            </div>
+
+            <!-- the div that has the background is totally empty.
+we should not leave it empty because if the image is gone,
+ the screen reader will return nothing (no alt). 
+So we add this in the div property -->
+            <div
+              class="cta-image-box"
+              role="img"
+              aria-label="woman enjoying food"
+            ></div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- to import the icons -->
     <script

@@ -527,3 +527,67 @@ ara to moirazoume*/
   font-size: 1.8rem;
   line-height: 1.8;
 }
+
+/*******************************/
+/*  CALL TO ACTION             */
+/*******************************/
+
+.section-cta {
+  /* the same padding with previous section .
+  for consistency */
+  padding: 9.6rem 0;
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  /* the darker the background the darker the shadow must be */
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  /* background-color: #e67e22; */
+
+  /* to use gradients we put background image property */
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+  border-radius: 11px;
+  overflow: hidden;
+  /* temp */
+  height: 500px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cta-text-box {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  color: #2e1907;
+}
+
+.cta-text {
+  /* we could make a class with these two
+  because we keep using them */
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 3.2rem;
+}
+
+.cta .heading-secondary {
+  color: #2e1907;
+  margin-bottom: 3.2rem;
+}
+
+.cta-image-box {
+  /* we it as background to  */
+  background-image: linear-gradient(
+      rgba(235, 151, 78, 0.35),
+      rgba(230, 125, 34, 0.35)
+    ),
+    url("../img/eating.jpg");
+
+  /* scale the background image to completely cover the container's area, 
+  while maintaining its original aspect ratio */
+  background-size: cover;
+  /* center the image */
+  background-position: center;
+}
