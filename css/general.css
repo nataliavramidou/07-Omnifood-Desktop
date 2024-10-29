@@ -36,7 +36,9 @@ Tints:
 #fae5d3
 Shades: #cf711f; #2e1907;
 Accents:
-Greys: #555
+Greys: 
+#767676
+#555
 #333
 
 
@@ -167,6 +169,10 @@ an exw omws mono 1 na min exei */
 
 .grid--center-v {
   align-items: center;
+}
+
+.grid--end-v {
+  align-items: end;
 }
 
 .btn,
