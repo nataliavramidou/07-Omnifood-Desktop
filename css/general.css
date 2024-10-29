@@ -165,9 +165,9 @@ an exw omws mono 1 na min exei */
   align-items: center;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
-  background-color: #e67e22;
   font-size: 2rem;
   font-weight: 600;
   display: inline-block;
@@ -181,6 +181,12 @@ an exw omws mono 1 na min exei */
   we put the transition on the element of the original state
   */
   transition: all 0.3s;
+
+  /* only necessairy
+  for the button (.btn)*/
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .btn--full:link,
@@ -207,6 +213,17 @@ an exw omws mono 1 na min exei */
 .btn--outline:hover,
 .btn--outline:active {
   background-color: #fdf2e9;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
 }
 
 .link:link,
@@ -251,6 +268,20 @@ an exw omws mono 1 na min exei */
   /* εδω το βαζουμε ετσι για να ειναι τετραγωνο */
   height: 3rem;
   width: 3rem;
+}
+
+/* the focusfield has to be styled too
+all anchors and buttons 
+have it so we can remove it from all */
+*:focus {
+  outline: none;
+
+  /*  we should not only put 
+outline: none;
+because we dont know where we are 
+put an other indicator too*/
+  outline: 4px dotted #e67e22;
+  outline-offset: 8px;
 }
 
 /* HELPER - SETTING CLASSES */

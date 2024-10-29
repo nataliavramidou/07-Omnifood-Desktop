@@ -550,13 +550,11 @@ ara to moirazoume*/
   background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
   border-radius: 11px;
   overflow: hidden;
-  /* temp */
-  height: 500px;
 }
 
 .cta-text-box {
   padding: 4.8rem 6.4rem 6.4rem 6.4rem;
-  color: #2e1907;
+  color: #45260a;
 }
 
 .cta-text {
@@ -568,7 +566,7 @@ ara to moirazoume*/
 }
 
 .cta .heading-secondary {
-  color: #2e1907;
+  color: inherit;
   margin-bottom: 3.2rem;
 }
 
@@ -587,10 +585,51 @@ ara to moirazoume*/
   background-position: center;
 }
 
-.form {
+.cta-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 3.2rem;
   row-gap: 2.4rem;
-  justify-items: end;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  /* the inputs dont inherit the font family
+  from the body element
+
+  solution font-family: inherit; 
+  we can use inherit in many attributes px.color*/
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: #fdf2e9;
+  border-radius: 9px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+/* to style the placeholder */
+.cta-form input::placeholder {
+  color: #aaa;
+}
+
+.cta-form button {
+  align-self: end;
+}
+
+/* nice focusfield */
+.cta-form button:focus,
+.cta-form input:focus,
+.cta-form select:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
 }

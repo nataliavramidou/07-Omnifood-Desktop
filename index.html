@@ -604,7 +604,7 @@ we will then include all of them. -->
 
               <!-- <div class="call-to-action-form-contain"> -->
 
-              <form class="form" action="#">
+              <form class="cta-form" action="#">
                 <div>
                   <!-- how to link label with input
                  id in input
@@ -650,14 +650,19 @@ we will then include all of them. -->
 
                 <!-- if we use html element button instead of input
                  we dont need type ="submit" -->
-                <button class="btn">Sign up now</button>
+
+                <!-- it get some of the styles
+                  because we put it in the .btn:link,
+                  .btn:visited styling.
+                  we add what s missing -->
+                <button class="btn btn--form">Sign up now</button>
               </form>
             </div>
 
             <!-- the div that has the background is totally empty.
-we should not leave it empty because if the image is gone,
- the screen reader will return nothing (no alt). 
-So we add this in the div property -->
+            we should not leave it empty because if the image is gone,
+            the screen reader will return nothing (no alt). 
+            So we add this in the div property -->
             <div
               class="cta-image-box"
               role="img"
