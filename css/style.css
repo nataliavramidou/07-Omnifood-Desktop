@@ -554,11 +554,6 @@ ara to moirazoume*/
   height: 500px;
 }
 
-.form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
 .cta-text-box {
   padding: 4.8rem 6.4rem 6.4rem 6.4rem;
   color: #2e1907;
@@ -569,7 +564,7 @@ ara to moirazoume*/
   because we keep using them */
   font-size: 1.8rem;
   line-height: 1.8;
-  margin-bottom: 3.2rem;
+  margin-bottom: 4.8rem;
 }
 
 .cta .heading-secondary {
@@ -590,4 +585,12 @@ ara to moirazoume*/
   background-size: cover;
   /* center the image */
   background-position: center;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+  justify-items: end;
 }

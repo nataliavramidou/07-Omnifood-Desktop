@@ -595,22 +595,70 @@ we will then include all of them. -->
            to be vissible (because of background color) -->
           <div class="cta">
             <div class="cta-text-box">
-              <div class="cta-heading">
-                <h2 class="heading-secondary">Get your first meal for free</h2>
-                <p class="cta-text">
-                  Healthy, tasty and hassle-free meals are waiting for you.
-                  Start eating well today. You can cancel or pause anytime. And
-                  the first meal is on us!
-                </p>
-              </div>
+              <h2 class="heading-secondary">Get your first meal for free</h2>
+              <p class="cta-text">
+                Healthy, tasty and hassle-free meals are waiting for you. Start
+                eating well today. You can cancel or pause anytime. And the
+                first meal is on us!
+              </p>
 
               <!-- <div class="call-to-action-form-contain"> -->
 
-              <form class="form">
-                <input class="name" type="text" />
-                <input class="email" type="text" />
-                <input class="name" type="text" />
-                <button class="submit" type="submit">dd</button>
+              <form class="form" action="#">
+                <div>
+                  <!-- how to link label with input
+                 id in input
+                  for element in label -->
+                  <label for="full-name">Full name</label>
+                  <input
+                    id="full-name"
+                    class="name"
+                    type="text"
+                    placeholder="John Smith"
+                    required
+                  />
+                </div>
+                <div>
+                  <label class="label" for="email">Email address</label>
+                  <input
+                    id="email"
+                    class="email"
+                    type="email"
+                    placeholder="me@example.com"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="select-where">Where did you hear from us</label>
+                  <select id="select-where" required>
+                    <!-- trick
+                put a value="" for the general before selecting option 
+                sto required θα χτυπαει-->
+                    <option class="option" value="">
+                      Please choose an option
+                    </option>
+                    <!-- in select => option
+              we have to specify the value of each option.
+              in other inputs, the value is what we write -->
+                    <option class="option" value="friends">
+                      Friends and Family
+                    </option>
+                    <option class="option" value="youtube">
+                      YouTube video
+                    </option>
+                    <option class="option" value="podcast">Podcast</option>
+                    <option class="option" value="other">Other</option>
+                  </select>
+                </div>
+
+                <!-- now that label and checkbox are linked
+                 when i click the label the checkbox is clicked 
+                <label for="checkbox"> checkbox </label
+                ><input id="checkbox" class="name" type="checkbox" /> -->
+
+                <!-- if we use html element button instead of input
+                 we dont need type ="submit" -->
+                <button class="btn">Sign up now</button>
               </form>
             </div>
 
