@@ -17,6 +17,11 @@ rest sections
 και 1300*/
 
 /* 1350/16=84 peripou  1344px akrivws*/
+
+/*******************************/
+/*  BELLOW 1344px (smaller desktops) */
+/******************************/
+
 @media (max-width: 84em) {
   .hero {
     max-width: 120rem;
@@ -37,5 +42,62 @@ rest sections
 
   .gallery {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* γενικα ενα προβλημα που πρεπει να 
+παρατηρουμε οσο μικραινει η οθονη
+ειναι οι πολυ λεπτες στηλες κειμενου
+και να σπαει το κειμενο σε πολλες γραμμες 
+
+επισης στο 100% φαινονται ολα huge*/
+
+/* ena sixno breakpoint prepei na einai konta sto 1200 giati
+ksekinane tablets /kinita 
+kai στο 100% φαινονται ολα huge*/
+
+/*******************************/
+/*  BELLOW 1200px (landscape tablets) */
+/******************************/
+
+/* epeidi xrhsimopoioume se ola rem,  
+ola einai depending sto font size tou html */
+@media (max-width: 75em) {
+  html {
+    /* we put it 9px */
+    font-size: 56.25%;
+  }
+
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+  /* ωστοσο καποια κειμενακια φαινονται 
+   πολυ μεγαλα ακομα, px ta headings
+  kai episis isws xreiastei 
+  na meiwsoume kai manually kai to spacing */
+  .heading-third {
+    font-size: 2.4rem;
+  }
+
+  .grid {
+    gap: 6.4rem 4.8rem;
+  }
+
+  /* θελουμε το header na einai ευθυγραμμισμενο
+    όχι πιο μεσα απο το content */
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .hero {
+    gap: 4.8rem;
+  }
+
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+
+  .testimonials-container {
+    padding: 9.6rem 3.2rem;
   }
 }
