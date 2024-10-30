@@ -2,6 +2,8 @@
 
 /* not a good practice to add a lot of breakpoints */
 
+/* a media query should work at a range of 200 - 300px */
+
 /* we should use rem in media queries
 instead of px */
 
@@ -99,5 +101,77 @@ ola einai depending sto font size tou html */
 
   .testimonials-container {
     padding: 9.6rem 3.2rem;
+  }
+}
+
+/*******************************/
+/*  BELLOW 944px (tablets) */
+/******************************/
+
+/* αρα καθε φορα τεσταρουμε ενα media query mexri 200 katw px
+na doume an spaei */
+@media (max-width: 59em) {
+  /* ena px katw */
+  html {
+    font-size: 50%;
+  }
+
+  /* kαποια grids να τα κανουμε μια στηλη,
+
+οπως το hero section kai τα testimonials */
+
+  /* otan apo duo columns to kanoume mia 
+isws thelei stoixisi sto kentro */
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 0 8rem;
+    gap: 6.4rem;
+  }
+
+  .hero-img {
+    width: 60%;
+  }
+
+  .delivered-meals {
+    margin-top: 3.2rem;
+    justify-content: center;
+  }
+
+  /* smaller logos */
+
+  .logo-img {
+    height: 2.4rem;
+  }
+
+  .number {
+    font-size: 7.4rem;
+  }
+
+  .meal-info-box {
+    padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+  }
+
+  .testimonials-section {
+    grid-template-columns: 1fr;
+  }
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  /* .img-gallery {
+    width: 60%;
+  } */
+
+  /* change the size of grid columns*/
+  .cta {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
+
+  .btn--form {
+    margin-top: 1.2rem;
   }
 }
