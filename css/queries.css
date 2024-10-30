@@ -1,0 +1,41 @@
+/* we will combine the two strategies */
+
+/* not a good practice to add a lot of breakpoints */
+
+/* we should use rem in media queries
+instead of px */
+
+/* rem and em do not depend on html font size in media queries
+instead 1rem=1em=16px
+ενω στην υπολοιπη css ειχαμε θεσει εμεις οτι 1rem=10px */
+/* επισης χρησιμοποιουμε em */
+
+/* we will first make the hero as wide as the 
+rest sections 
+
+οποτε ψαχνουμε breakpoint μεταξυ 1366 που ειναι μια κλασσικη τιμή
+και 1300*/
+
+/* 1350/16=84 peripou  1344px akrivws*/
+@media (max-width: 84em) {
+  .hero {
+    max-width: 120rem;
+  }
+
+  /* me enan kanona mporei na spaei kati allo
+   */
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+
+  /* not a good practice to add a lot of breakpoints
+
+    αρα χρησιμοοιουμε ενα που βαλαμε για να λυσουμε πολλα προβληματα
+    πχ η gallery, gia na to lusoume mporoume 
+    na valoume 2 stiles anti gia treis
+    */
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
