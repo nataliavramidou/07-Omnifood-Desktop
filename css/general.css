@@ -67,6 +67,8 @@ html {
 
   /* percentage of user's browser font setting */
   font-size: 62.5%;
+
+  overflow-x: hidden;
 }
 
 body {
@@ -78,6 +80,7 @@ body {
   /* osa antikeimena vgainoun apeksw ston x aksona
   px to mobile nav */
   /* but only works if nothing absolutely positioned to body*/
+  /* prepei na mpei kai sto html */
   overflow-x: hidden;
 }
 

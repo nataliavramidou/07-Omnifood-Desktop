@@ -249,3 +249,57 @@ isws thelei stoixisi sto kentro */
     font-size: 3rem;
   }
 }
+
+/*******************************/
+/*  BELLOW 704px (smaller tablets) */
+/******************************/
+
+/* we will transform every grid that has 3 or 4 cols in 2 cols
+
+ */
+@media (max-width: 44em) {
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .diets {
+    grid-column: 1/3;
+    justify-self: center;
+  }
+
+  .heading-secondary {
+    margin-bottom: 4.8rem;
+  }
+
+  .pricing-plan {
+    width: 100%;
+  }
+
+  .grid--footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  /* i want to change the grid columns
+    the last to be on top
+  */
+
+  /* the down row we want them to expand */
+  /* TRICK
+
+    grid with 6 columns
+
+    the first 3 will expand in 2 cells
+
+    the last 2 will expand in 3 cells */
+  .nav-col {
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+
+  .address-col,
+  .logo-col {
+    grid-column: span 3;
+  }
+}
