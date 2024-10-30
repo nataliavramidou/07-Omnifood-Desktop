@@ -174,4 +174,78 @@ isws thelei stoixisi sto kentro */
   .btn--form {
     margin-top: 1.2rem;
   }
+
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  /* we want to position absolutely 
+  the main nav */
+
+  .main-nav {
+    /* we want the menu to be a little transparent */
+    background-color: rgba(255, 255, 255, 0.97);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    /* to kanoume etsi gia na poianei oli 
+    tin othoni */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* move it out of the screen  completely to the right */
+    transform: translate(100%);
+
+    /* gia na mi pianei xoro deksia */
+
+    /* the third value of transition
+    is the effect */
+    transition: all 0.5s ease-in;
+
+    /* hide the navigation by default */
+    /* allows no transition at all */
+    /* display: none; */
+
+    /* hide it visually */
+    opacity: 0;
+
+    /* we have to make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* hide it from sceen readers */
+    visibility: hidden;
+  }
+
+  /* when the nav open exists */
+  .nav-open .main-nav {
+    /* back to visible */
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translate(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
 }
