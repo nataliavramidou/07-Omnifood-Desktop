@@ -303,3 +303,96 @@ isws thelei stoixisi sto kentro */
     grid-column: span 3;
   }
 }
+
+/*******************************/
+/*  BELLOW 544px (phones) */
+/******************************/
+
+/* πλεον δεν θα εχουμε πουθενα πανω απο 1 στηλη */
+@media (max-width: 34em) {
+  /* html {
+    font-size: 43.75%;
+  } */
+
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols,
+  .testimonials,
+  .cta {
+    grid-template-columns: repeat(1, 1fr);
+
+    justify-items: center;
+  }
+
+  /* decrease the gap of all grids */
+  .grid {
+    row-gap: 4.8rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+  }
+
+  .hero {
+    padding: 0 3.2rem;
+  }
+
+  .section-hero {
+    padding: 2.4rem 0 6.4rem 0;
+  }
+
+  /* in phones we need big buttons that are easy to tap
+    so we can increase the vertical padding
+    na einai pio psila diladi */
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.6rem;
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+
+  /* SOS
+
+it is nth-child(2) and not 1 because 
+t is the second child of the parent container */
+  .step-img-box:nth-child(2) {
+    grid-row: 1;
+  }
+
+  .step-img-box:nth-child(6) {
+    grid-row: 5;
+  }
+
+  /* τι κανουμε οταν θελουμε ν αλλαξουμε το gap σε μερικα σημεια
+
+  αλλα οχι σε ολο το grid */
+
+  /* to translate transform DEN EPIREAZEI TA GURW STOIXEIA */
+  .step-img-box {
+    transform: translate(0, 24px);
+  }
+
+  .diets {
+    grid-column: 1;
+  }
+
+  .plan-details {
+    line-height: 1.2;
+  }
+
+  .logo-img {
+    height: 1.2rem;
+  }
+
+  /* the image disappears because the div element has no content
+  and it has it as a background image */
+  .cta-image-box {
+    height: 36rem;
+    width: 100%;
+    grid-row: 1;
+  }
+}
