@@ -21,6 +21,23 @@ const yearCopy = document.querySelector(".year");
 const currentDate = new Date();
 yearCopy.textContent = currentDate.getFullYear();
 
+//make mobile navigation work
+const header = document.querySelector(".header");
+
+const btnMobile = document.querySelector(".btn-mobile-nav");
+
+btnMobile.addEventListener("click", function () {
+  // if (header.classList.contains("nav-open")) {
+  //   //add class to element
+  //   header.classList.remove("nav-open");
+  // } else {
+  //   //remove class from element
+  //   header.classList.add("nav-open");
+  // }
+
+  //it does automatically add or remove when a class is present
+  header.classList.toggle("nav-open");
+});
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {

@@ -178,6 +178,9 @@ isws thelei stoixisi sto kentro */
   /* MOBILE NAVIGATION */
   .btn-mobile-nav {
     display: block;
+    /* set z index really big to be sure that the mobile 
+    button will always be on top of the navigation */
+    z-index: 1000;
   }
 
   /* we want to position absolutely 
