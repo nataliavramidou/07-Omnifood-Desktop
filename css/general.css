@@ -69,6 +69,12 @@ html {
   font-size: 62.5%;
 
   overflow-x: hidden;
+
+  /* does nt work only in safari
+  but works in most browsers
+  smooth scrolling
+  so we will do it with js */
+  /* scroll-behavior: smooth; */
 }
 
 body {

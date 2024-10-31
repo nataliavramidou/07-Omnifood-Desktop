@@ -28,6 +28,11 @@ we will then include all of them. -->
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></scriptCTA>
 
+    <!-- this is the code to play to safari -->
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
     <script defer src="js/script.js"></script>
     <title>Omnifood landing page</title>
   </head>
@@ -41,11 +46,11 @@ we will then include all of them. -->
       /></a>
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a href="#" class="main-nav-link">How it works</a></li>
-          <li><a href="#" class="main-nav-link">Meals</a></li>
-          <li><a href="#" class="main-nav-link">Testimonials</a></li>
-          <li><a href="#" class="main-nav-link">Pricing</a></li>
-          <li><a href="#" class="main-nav-link nav-cta">Try for free</a></li>
+          <li><a href="#how" class="main-nav-link">How it works</a></li>
+          <li><a href="#meal" class="main-nav-link">Meals</a></li>
+          <li><a href="#testimonial" class="main-nav-link">Testimonials</a></li>
+          <li><a href="#pricing" class="main-nav-link">Pricing</a></li>
+          <li><a href="#cta" class="main-nav-link nav-cta">Try for free</a></li>
         </ul>
       </nav>
 
@@ -68,11 +73,13 @@ we will then include all of them. -->
               nutritional needs.
             </p>
             <!-- main call to action button, so subsribe -->
-            <a href="#" class="btn btn--full margin-right-sm"
+            <!-- navigation to sections with html
+              using ids -->
+            <a href="#cta" class="btn btn--full margin-right-sm"
               >Start eating well</a
             >
             <!-- secondary button -->
-            <a href="#" class="btn btn--outline">Learn more &darr;</a>
+            <a href="#how" class="btn btn--outline">Learn more &darr;</a>
             <div class="delivered-meals">
               <div class="delivered-img">
                 <img
@@ -143,7 +150,7 @@ we will then include all of them. -->
         </div>
       </section>
 
-      <section class="section-how">
+      <section class="section-how" id="how">
         <!-- το πανω πανω δεν χρειαζεται να το 
          βαλουμε μέσα στο grid, είναι διαφορετικο κομματι (heading) -->
         <div class="container">
@@ -207,7 +214,7 @@ we will then include all of them. -->
         </div>
       </section>
 
-      <section class="section-meal">
+      <section class="section-meal" id="meal">
         <div class="container center-text">
           <span class="subheading">Meals</span>
           <h2 class="heading-secondary">
@@ -330,7 +337,7 @@ we will then include all of them. -->
         </div>
       </section>
 
-      <section class="testimonials-section">
+      <section class="testimonials-section" id="testimonial">
         <!-- we dont use the reusable grid because the spacing is not ideal (it is for bigger layouts) -->
         <div class="testimonials-container">
           <span class="subheading">testimonials</span>
@@ -483,7 +490,7 @@ we will then include all of them. -->
         </div>
       </section>
 
-      <section class="section-pricing">
+      <section class="section-pricing" id="pricing">
         <div class="container">
           <span class="subheading">Pricing</span>
           <h2 class="heading-secondary">
@@ -614,7 +621,10 @@ we will then include all of them. -->
         </div>
       </section>
 
-      <section class="section-cta">
+      <!-- navigation to sections with html
+
+    using ids -->
+      <section class="section-cta" id="cta">
         <div class="container">
           <!-- we make it different div from above because we dont want the padding of the container
            to be vissible (because of background color) -->

@@ -38,6 +38,41 @@ btnMobile.addEventListener("click", function () {
   //it does automatically add or remove when a class is present
   header.classList.toggle("nav-open");
 });
+
+//smooth scrolling in safari
+
+const ahref = document.querySelectorAll("a:link");
+console.log(ahref);
+
+//add event listener to each link individually
+ahref.forEach((a) => {
+  a.addEventListener("click", (e) => {
+    //access to the event object
+    console.log(e);
+
+    //prevent default event
+    e.preventDefault();
+    const href = a.getAttribute("href");
+
+    if (href == "#")
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+
+    //scroll to a section
+    //find it by id
+    if (href != "#" && href.startsWith("#")) {
+      //select the element by id
+      const section = document.querySelector(href);
+      section.scrollIntoView({ behavior: "smooth" });
+
+      //na kleinei to menu otan eilegw navigation
+      if (a.classList.contains("main-nav-link"))
+        header.classList.toggle("nav-open");
+    }
+  });
+});
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
