@@ -73,6 +73,39 @@ ahref.forEach((a) => {
     }
   });
 });
+
+//add sticky navigation after hero section is visible
+const head = document.querySelector("header");
+const body = document.querySelector("body");
+const hero = document.querySelector(".section-hero");
+
+//we want to observe the hero section
+const obs = new IntersectionObserver(
+  function (entries) {
+    //if we had many thresholds, we would have many entries
+    const ent = entries[0];
+    console.log(ent);
+    console.log(ent.isIntersecting);
+    if (!ent.isIntersecting) {
+      body.classList.add("sticky");
+    } else {
+      body.classList.remove("sticky");
+    }
+  }, //conditions
+  {
+    //in the viewport
+    root: null,
+    //the event is when 0% of the hero section is inside of the viewport
+    //so moves out completely of th viewport
+    threshold: 0, //,
+    // margin applied outside of the root
+    //the height is 8rem, so we want -80px
+    //that s why we wanted a fixed height
+    rootMargin: "-80px",
+  }
+);
+obs.observe(hero);
+
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {

@@ -12,6 +12,7 @@
   otherwise we would use only padding. */
   height: 9.6rem;
   padding: 0 4.8rem;
+
   position: relative;
 }
 
@@ -84,6 +85,30 @@
 /* select based on attribute name */
 .icon-mobile-nav[name="close-outline"] {
   display: none;
+}
+
+/* STICKY NAVIGATION */
+
+/* we put the sticky in the father
+because we want to manipulate the children */
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+
+  /* because we want it higher than other things on the screen */
+  z-index: 50;
+
+  /* give it fixed height */
+  /* we want a fixed height for js (rootMargin) */
+  height: 8rem;
+}
+
+.sticky .section-hero {
+  margin-top: 9.6rem;
 }
 
 /*******************************/
