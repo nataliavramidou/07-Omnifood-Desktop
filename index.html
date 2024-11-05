@@ -2,9 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- html CRUSIAL FOR RESPONSIVE DESIGN 
+    <!-- html CRUSIAL FOR RESPONSIVE DESIGN
      The page matches device width-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- for lighthouse SEO optimazation always put it -->
+    <meta
+      name="description"
+      content="The landing page of a company
+    that makes meals and users can eat each day."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,6 +24,16 @@ we will then include all of them. -->
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/queries.css" />
+
+    <!-- //import the icon for the title -->
+    <link rel="icon" href="img/favicon.png" />
+
+    <!-- for ios / apple to have icons -->
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+
+    <!-- for android to have icons-->
+    <!-- this file is created for android to have icons-->
+    <link rel="manifest" href="manifest.webmanifest" />
 
     <!-- to import the icons -->
     <script
@@ -34,7 +51,7 @@ we will then include all of them. -->
       src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
     ></script>
     <script defer src="js/script.js"></script>
-    <title>Omnifood landing page</title>
+    <title>Omnifood &mdash; Never cook again</title>
   </head>
   <body>
     <!--nav-open: a class to show when nav is open
@@ -55,7 +72,7 @@ we will then include all of them. -->
       </nav>
 
       <!-- mobile navl -->
-      <button class="btn-mobile-nav">
+      <button class="btn-mobile-nav" aria-label="mobile-navigation">
         <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
         <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
       </button>
@@ -120,7 +137,22 @@ we will then include all of them. -->
           </div>
 
           <div class="hero-img-box">
-            <img src="img/hero.png" alt="hero-img" class="hero-img" />
+            <!-- with this trick the browser decides what picture it can display best. -->
+            <picture>
+              <source srcset="img/hero.webp" type="image/webp" />
+              <source srcset="img/hero-min.png" type="image/png" />
+              <!-- we need the image tag inside the picture.
+             and the image format that will be displayed if source is not 
+             understandable for browser -->
+              <img src="img/hero.webp" alt="hero-img" class="hero-img" />
+            </picture>
+            <!-- we change the image to the new compressed one
+             cause we should not have images with big sizes
+             to improve performance -->
+
+            <!-- mporoume sto inspect na doume sto network ->rsources katw katw
+              oti ta mb meiothikan. -->
+            <!-- <img src="img/hero.webp" alt="hero-img" class="hero-img" /> -->
           </div>
         </div>
       </section>
@@ -128,7 +160,7 @@ we will then include all of them. -->
       <section class="featured-in">
         <div class="container">
           <!-- εδω παλι βαζουμε h2 λόγω της σημασίας του αλλα του δινουμε
-            αλλη μορφοποιηση 
+            αλλη μορφοποιηση
             gia auto alli class-->
           <h2 class="featured-in-heading">Featured in</h2>
 
@@ -151,7 +183,7 @@ we will then include all of them. -->
       </section>
 
       <section class="section-how" id="how">
-        <!-- το πανω πανω δεν χρειαζεται να το 
+        <!-- το πανω πανω δεν χρειαζεται να το
          βαλουμε μέσα στο grid, είναι διαφορετικο κομματι (heading) -->
         <div class="container">
           <span class="subheading">How it works</span>
@@ -406,7 +438,7 @@ we will then include all of them. -->
               alt="gallery-1"
               class="img-gallery"
             />
-            <!-- 
+            <!--
             we put figure to be able to use figcaption
             <figcaption></figcaption> -->
           </figure>
@@ -665,7 +697,7 @@ we will then include all of them. -->
                   <label for="select-where">Where did you hear from us</label>
                   <select id="select-where" required>
                     <!-- trick
-                put a value="" for the general before selecting option 
+                put a value="" for the general before selecting option
                 sto required θα χτυπαει-->
                     <option value="">Please choose an option</option>
                     <!-- in select => option
@@ -679,7 +711,7 @@ we will then include all of them. -->
                 </div>
 
                 <!-- now that label and checkbox are linked
-                 when i click the label the checkbox is clicked 
+                 when i click the label the checkbox is clicked
                 <label for="checkbox"> checkbox </label
                 ><input id="checkbox" class="name" type="checkbox" /> -->
 
@@ -690,13 +722,15 @@ we will then include all of them. -->
                   because we put it in the .btn:link,
                   .btn:visited styling.
                   we add what s missing -->
-                <button class="btn btn--form">Sign up now</button>
+                <button class="btn btn--form" aria-label="sign-up">
+                  Sign up now
+                </button>
               </form>
             </div>
 
             <!-- the div that has the background is totally empty.
             we should not leave it empty because if the image is gone,
-            the screen reader will return nothing (no alt). 
+            the screen reader will return nothing (no alt).
             So we add this in the div property -->
             <div
               class="cta-image-box"
@@ -715,7 +749,7 @@ we will then include all of them. -->
             <img class="logo" src="img/omnifood-logo.png" alt="logo"
           /></a>
 
-          <!-- the social media logos are also 
+          <!-- the social media logos are also
            a list of links so we should use ul -->
           <ul class="social">
             <li>
@@ -758,7 +792,7 @@ we will then include all of them. -->
           </address>
         </div>
 
-        <!-- we can put nav element not only in the header 
+        <!-- we can put nav element not only in the header
          but wherever we have something like navigation.
         Navigations always in uls -->
         <nav class="nav-col">
